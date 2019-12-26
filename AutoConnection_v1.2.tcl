@@ -415,10 +415,10 @@ proc ::rgdlnkCnt::createSingle {args} {
     eval *createmark comps 1 $searchComps
     set holeInfo [hm_ce_gethmholes 1 $maxdia 0 1 0 1]
     if {$currentComp == 0} {
-        if {![hm_entityinfo exist comp "spiders_autogenerate" -byname]} {
-            *createentity comps name=RigidLink color=3
+        if {![hm_entityinfo exist comp "rigids_autogenerate" -byname]} {
+            *createentity comps name="rigids_autogenerate" color=3
         }
-        *currentcollector comps "spiders_autogenerate"
+        *currentcollector comps "rigids_autogenerate"
     }
     foreach group $holeInfo {
         foreach hole $group {
@@ -500,10 +500,10 @@ proc ::rgdlnkCnt::createMultiple {args} {
         return
     }
     if {$currentComp == 0} {
-        if {![hm_entityinfo exist comp "spiders_autogenerate" -byname]} {
-            *createentity comps name=RigidLink color=3
+        if {![hm_entityinfo exist comp "rigids_autogenerate" -byname]} {
+            *createentity comps name="rigids_autogenerate" color=3
         }
-        *currentcollector comps "spiders_autogenerate"
+        *currentcollector comps "rigids_autogenerate"
     }
     if {$weldTol == 0 || $weldTol == ""} {
         set tolorance 99999
